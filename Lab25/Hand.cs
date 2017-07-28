@@ -50,5 +50,19 @@ namespace COMP123_S2017_Lesson11B
 
             return outputString;
         }
+
+        //HIGHESTCARDS() 
+        public void HighestCards(Hand highest)
+        {
+            var highestCards = from cards in highest orderby cards.Face descending select cards.Face;
+            Console.WriteLine("Highest Cards are: ");
+            foreach (var card in highestCards)
+            {
+                {
+                    Console.WriteLine(card);
+                }
+            }
+
+        }
     }
 }
