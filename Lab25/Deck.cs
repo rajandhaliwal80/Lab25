@@ -113,12 +113,12 @@ namespace COMP123_S2017_Lesson11B
         public Hand Deal5()
         {
             Hand fiveCards = new Hand();
-            for (int five = 0; five <= 4; five++)
+            for (int five = 0; five < 5; five++)
             {
                 Card topFive = this[0];
                 fiveCards.Add(this[0]);
                 this.RemoveAt(0); //this removes the cards dealt as top five
-                Console.WriteLine("Cards Dealt: {0} = {1} of {2} || Deck size = {3}", topCards + 1, topFive.Suit, topFive.Face, this.Count);
+                Console.WriteLine("Cards Dealt: {0} = {1} of {2} || Deck size = {3}", (int)topFive.Suit + 1, topFive.Suit, topFive.Face, this.Count);
             }
             return fiveCards;
 

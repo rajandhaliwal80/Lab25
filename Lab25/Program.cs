@@ -36,6 +36,15 @@ namespace COMP123_S2017_Lesson11B
             Console.WriteLine(deck.ToString());
 
             //hand = deck.Deal5(); // moves the top 5 cards from the deck to the hand object
+
+            deck.Shuffle();
+            Console.WriteLine("Cards after shuffling are:");
+            Console.WriteLine(deck.ToString());
+            Console.WriteLine("Top Five Cards are:");
+            Console.WriteLine("----------------------------------------");
+            hand = deck.Deal5(); 
+            Console.WriteLine(hand.ToString());
+            hand.HighestCards(hand);
         }
     }
 }
